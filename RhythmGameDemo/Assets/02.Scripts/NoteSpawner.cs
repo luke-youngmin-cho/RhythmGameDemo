@@ -6,7 +6,7 @@ public class NoteSpawner : MonoBehaviour
 
     public void SpawnNote()
     {
-        Instantiate(notePrefab, transform.position, Quaternion.identity);
+        GameObject note = Instantiate(notePrefab, transform.position, Quaternion.identity);
+        note.transform.localScale = transform.lossyScale;
     }
-
 }
